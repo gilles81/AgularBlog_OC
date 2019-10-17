@@ -9,13 +9,6 @@ import { Component , Input , OnInit} from '@angular/core';
 export class AppComponent {
   title = 'AngBlog';
 
-  post: {
-    title: string,
-    content: string,
-    loveIts: number,
-    created_at: Date
-  };
-
   posts = [
     {
       title: 'Mon premier post',
@@ -24,7 +17,7 @@ export class AppComponent {
         ' Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam' +
         'magni quis!',
       loveIts: 0,
-      created_at :  new Date()
+      created_at : new Date()
 
     },
     {
