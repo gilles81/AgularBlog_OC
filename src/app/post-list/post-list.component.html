@@ -1,0 +1,22 @@
+
+<!--Post list component-->
+<!--All post are listed here-->
+  <h1 class="my-4">Angular Blog For OC</h1>
+  <!-- Blog Post item -->
+    <app-post-list-item *ngFor="let post of posts "
+                         [postTitle]="post.title"
+                        [postContent]="post.content"
+                        [postLoveIt]="post.loveIt">
+    </app-post-list-item>
+
+  <!-- Pagination -->
+  <ul class="pagination justify-content-center mb-4">
+    <li class="page-item">
+      <a class="page-link" href="#">&larr;  Older</a>
+    </li>
+    <li class="page-item disabled">
+      <a class="page-link" href="#">Newer  &rarr;</a>
+    </li>
+  </ul>
+
+

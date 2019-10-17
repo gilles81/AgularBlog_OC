@@ -1,4 +1,5 @@
 import { Component , Input , OnInit} from '@angular/core';
+import {formatNumber} from "@angular/common";
 
 @Component({
   selector: 'app-root',
@@ -13,27 +14,24 @@ export class AppComponent {
       content : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. ' +
         'Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam.' +
         ' Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam' +
-        'magni quis!'
+        'magni quis!',
+      loveIt: '10'
     },
     {
       title: 'Mon deuxième post',
       content : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. ' +
         'Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam.' +
         ' Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam' +
-        'magni quis!'
+        'magni quis!',
+      loveIt: '0'
     },
     {
       title: 'Encore un post',
       content : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. ' +
         'Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam.' +
         ' Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam' +
-        'magni quis!'
+        'magni quis!',
+      loveIt: '0'
     }
   ];
-  poste: {
-    title: string,
-    content: string,
-    loveIts: number,
-    created_at: Date
-  };
 }
