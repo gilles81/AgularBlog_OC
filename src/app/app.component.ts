@@ -15,7 +15,7 @@ export class AppComponent {
         'Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam.' +
         ' Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam' +
         'magni quis!',
-      loveIt: '10'
+      loveIt: 10
     },
     {
       title: 'Mon deuxième post',
@@ -23,7 +23,7 @@ export class AppComponent {
         'Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam.' +
         ' Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam' +
         'magni quis!',
-      loveIt: '0'
+      loveIt: 2
     },
     {
       title: 'Encore un post',
@@ -31,7 +31,7 @@ export class AppComponent {
         'Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam.' +
         ' Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam' +
         'magni quis!',
-      loveIt: '0'
+      loveIt: 0
     }
   ];
 }

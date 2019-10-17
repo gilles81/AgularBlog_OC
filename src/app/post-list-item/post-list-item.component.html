@@ -1,15 +1,19 @@
-<div class="card mb-4">
-  <div class="card-body">
-    <h2 class="card-title"> title :{{postTitle}} </h2>
+<div class="card mb-4 ">
+  <div class=" card-body  " [ngClass]="{'alert-success':true,
+  'alert-success': alertStatus()}">
+    <h2 class="card-title  "> {{postTitle}} </h2>
     <p class="card-text">{{postContent}}</p>
     <a href="#" class="btn btn-primary">Read More &rarr;</a>
   </div>
   <div class="card-footer text-muted">
     Posted on  by
     <a href="#">Start Bootstrap</a>
-    <p><button class="btn btn-success"  >Like  </button>
-      <button class="btn btn-outline-danger" >disLike</button>
-      <a> {{ postLoveIt }} </a>
+    <p><button class="btn btn-outline-success"
+    (click)="onAddLike()"
+    (click)="alertStatus()">Like  </button>
+      <button class="btn btn-outline-danger" (click)=" onDisLike()" >disLike</button>
+      <a> <i class="far fa-thumbs-up"></i>{{ postLoveIt }} </a>
+
     </p>
   </div>
 </div>

@@ -10,7 +10,11 @@ import {Component, Input, OnInit} from '@angular/core';
 export class PostListComponent implements OnInit {
   /* Input section */
   @Input() posts;
-  constructor() { }
+
+  constructor() {
+  }
+
   ngOnInit() {
   }
+
 }
