@@ -8,8 +8,10 @@ import { Component, Input , OnInit } from '@angular/core';
 export class PostListItemComponent implements OnInit {
   @Input() postTitle: string;
   @Input() postContent: string;
-  @Input() postLoveIt: number;
+  @Input() postCreatedDate: string;
   likeStatus: boolean;
+  postLoveIt = 0;
+  postDontLoveIt =  0;
 
   constructor() { }
 
@@ -18,17 +20,13 @@ export class PostListItemComponent implements OnInit {
 
   onAddLike() {
     this.postLoveIt = this.postLoveIt + 1;
+    return this.postLoveIt;
    }
   onDisLike() {
-    if (this.postLoveIt > 0) {
-      this.postLoveIt = this.postLoveIt - 1;
-    }
+      this.postDontLoveIt = this.postDontLoveIt + 1;
+      return this.postDontLoveIt;
   }
-  alertStatus() {
-    if (this.postLoveIt > 20) {
-      return this.likeStatus = true;
-    } else {
-      return this.likeStatus = false;
-    }
+  computeLoveIts() {
+    return  this.postLoveIt - this.postDontLoveIt;
   }
 }

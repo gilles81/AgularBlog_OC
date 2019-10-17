@@ -1,5 +1,5 @@
 import { Component , Input , OnInit} from '@angular/core';
-import {formatNumber} from "@angular/common";
+
 
 @Component({
   selector: 'app-root',
@@ -8,6 +8,14 @@ import {formatNumber} from "@angular/common";
 })
 export class AppComponent {
   title = 'AngBlog';
+
+  post: {
+    title: string,
+    content: string,
+    loveIts: number,
+    created_at: Date
+  };
+
   posts = [
     {
       title: 'Mon premier post',
@@ -15,7 +23,9 @@ export class AppComponent {
         'Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam.' +
         ' Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam' +
         'magni quis!',
-      loveIt: 10
+      loveIts: 0,
+      created_at :  new Date()
+
     },
     {
       title: 'Mon deuxième post',
@@ -23,7 +33,8 @@ export class AppComponent {
         'Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam.' +
         ' Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam' +
         'magni quis!',
-      loveIt: 2
+      loveIts: 0,
+      created_at : new Date()
     },
     {
       title: 'Encore un post',
@@ -31,7 +42,8 @@ export class AppComponent {
         'Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam.' +
         ' Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam' +
         'magni quis!',
-      loveIt: 0
+      loveIts: 0,
+      created_at : new Date()
     }
   ];
 }
